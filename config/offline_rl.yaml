@@ -1,5 +1,5 @@
 defaults:
-    - agent: maddpg
+    - agent: rem_maddpg
     - data: local
 
 # Experiment Settings
@@ -17,7 +17,7 @@ num_eval_episodes: 3
 
 common_reward: true
 
-device: cuda
+device: cpu
 
 # Logging Settings
 log_frequency: 5000
@@ -28,4 +28,5 @@ save_video: true
 # hydra configuration
 hydra:
     run:
-        dir: ./experiment/${now:%Y.%m.%d}/${now:%H%M}_${agent.name}_orl-${experiment}
+        dir: ./dataset
+        # ./experiment/${now:%Y.%m.%d}/${now:%H%M}_${agent.name}_orl-${experiment}

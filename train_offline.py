@@ -104,8 +104,7 @@ class Workspace(object):
         start_time = time.time()
 
         while self.step < self.cfg.num_train_steps + 1:
-            if done or self.step % self.cfg.eval_frequency == 0:
-
+            if done or self.step % self.cfg.eval_frequency == 0: 
                 if self.step > 0:
                     self.logger.log('train/duration', time.time() - start_time, self.estimated_step)
                     start_time = time.time()
@@ -124,7 +123,7 @@ class Workspace(object):
 
                 self.logger.log('train/episode', episode, self.estimated_step)
 
-            self.agent.update(self.replay_buffer, self.logger, self.estimated_step)
+            self.agent.update(self.replay_buffer, self.logger, self.estimated_step) 
 
             episode_step += 1
             self.step += 1

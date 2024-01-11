@@ -63,8 +63,8 @@ class OverCookedEnv():
     def _get_observation(self):
         return self.get_feature_state().reshape(len(self.agents), -1)
 
-    def get_onehot_state(self):
-        return np.array(self.overcooked.lossless_state_encoding_mdp(self.overcooked.state))
+    # def get_onehot_state(self):
+    #     return np.array(self.overcooked.lossless_state_encoding_mdp(self.overcooked.state))
 
     def get_feature_state(self):
         return np.array(self.overcooked.featurize_state_mdp(self.overcooked.state))

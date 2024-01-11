@@ -29,7 +29,7 @@ google-pasta==0.2.0
 grpcio==1.32.0
 gym==0.18.3
 h5py==2.10.0
-hydra-core @ git+git://github.com/facebookresearch/hydra@e381f5414c6b1b2bf60411786b5c8b24ec6f6d4b
+hydra-core==1.1.0
 idna==2.10
 imageio==2.9.0
 imageio-ffmpeg==0.4.4

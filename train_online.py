@@ -34,7 +34,7 @@ class Workspace(object):
         self.discrete_action = cfg.discrete_action_space
         self.save_replay_buffer = cfg.save_replay_buffer
         # self.env = NormalizedEnv(make_env(cfg.env, discrete_action=self.discrete_action))
-        self.env = OverCookedEnv(scenario=self.cfg.env, episode_length=self.cfg.episode_length)
+        self.nv = OverCookedEnv(scenario=self.cfg.env, episode_length=self.cfg.episode_length)
 
         self.env_agent_types = get_agent_types(self.env)
         self.agent_indexes = find_index(self.env_agent_types, 'ally')
